@@ -2,10 +2,10 @@
 
 #author: yanhong hong
 
-liganddir='/home/hyh/project13_prepreceptoranddocking/ligands'
-receptordir='/home/hyh/project13_prepreceptoranddocking/receptor'
-resultdir='/home/hyh/project13_prepreceptoranddocking/results'
-logdir='/home/hyh/project13_prepreceptoranddocking/log'
+liganddir=$PWD'/ligands'
+receptordir=$PWD'/receptor'
+resultdir=$PWD'/results'
+logdir=$PWD'/log'
 
 #docking parameters
 num_modes=40
@@ -14,8 +14,14 @@ energy_range=10
 cpu=7
 process_num=2
 
-mkdir ${resultdir}
-mkdir ${logdir}
+if [ ! -d "$resultdir" ]; then
+    mkdir ${resultdir}
+fi
+
+if [ ! -d "$logdir" ]; then
+    mkdir ${logdir}
+fi
+
 
 #blind dock
 for ligand in ${liganddir}/pdbqt/*.pdbqt
