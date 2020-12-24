@@ -3,7 +3,7 @@
 #this script use the prepare_ligand4.py script to prepare the ligands.
 
 liganddir='ligands'
-script='/home/hyh/project13_prepreceptoranddocking/prepare_ligand4.py'
+script=$PWD'/prepare_ligand4.py'
 pythonsh='/home/hyh/MGLTools-1.5.6/mgltools_x86_64Linux2_1.5.6/bin/pythonsh'
 process_num=8
 
