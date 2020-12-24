@@ -7,7 +7,7 @@
 #path of pythonsh
 pythonsh='/home/hyh/MGLTools-1.5.6/mgltools_x86_64Linux2_1.5.6/bin/pythonsh'
 #path of the script
-script='/home/hyh/project13_prepreceptoranddocking/prepare_receptor4.py'
+script='$PWD/prepare_receptor4.py'
 process_num=8
 
 rename 's/.B99990001//g' models/*.pdb
